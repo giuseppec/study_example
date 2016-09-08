@@ -6,6 +6,6 @@ http://www.openml.org/s/7
 
 ## Run it
 
-Thie repo is runnable by everware:
+This repo is runnable by everware:
 
 [![run at everware](https://img.shields.io/badge/run%20me-@everware-blue.svg)](https://everware.rep.school.yandex.net/hub/oauth_login?repourl=https://github.com/openml/study_example)
