@@ -7,9 +7,11 @@ machine:
 
 dependencies:
   override:
+    - free -m
+    - df -h
     - docker build -t mystudy . 
 
 test:
   override:
     - docker run -ti --rm -v `pwd`:/notebooks mystudy bash -c
-        "cd /notebooks ; jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 --execute StudyTest.ipynb"
+        "cd /notebooks ; free -m ; jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=-1 --execute StudyTest.ipynb"
