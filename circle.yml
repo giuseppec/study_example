@@ -12,4 +12,4 @@ dependencies:
 test:
   override:
     - docker run -ti --rm -v `pwd`:/notebooks mystudy bash -c
-        "cd /notebooks ; jupyter nbconvert --to notebook --execute StudyTest.ipynb"
+        "cd /notebooks ; jupyter nbconvert --to notebook --ExecutePreprocessor.timeout=None --execute StudyTest.ipynb"
