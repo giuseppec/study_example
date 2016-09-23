@@ -1,6 +1,6 @@
 # Massive machine learning experiments using mlr and OpenML
 
-[![integration check status](https://img.shields.io/circleci/project/BrightFlair/PHP.Gt.svg)](https://circleci.com/gh/openml/study_example/)
+[![integration check status](https://img.shields.io/circleci/project/openml/study_example.svg)](https://circleci.com/gh/openml/study_example/)
 
 In this study, we investigate and summarize the performance of a wide range of ML algorithms (using its default hyper-parameter values) on a wide range of OpenML classifications tasks. This will yield a meta-dataset that can be leveraged for algorithm selection and many future studies into learning performance.
 
