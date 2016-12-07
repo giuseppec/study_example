@@ -18,8 +18,8 @@ getExperimentsData = function(tag, numRuns) {
     })
   )
 
-  sub.datasets = dplyr::select(.data = listOMLDataSets(), data.id, name, NumberOfInstances, 
-    NumberOfFeatures, NumberOfClasses, MajorityClassSize)
+  sub.datasets = dplyr::select(.data = listOMLDataSets(), data.id, name, number.of.instances, 
+    number.of.features, number.of.classes, majority.class.size)
 
   # getting dataset information from results
   aux = lapply(1:nrow(results), function(i) {
@@ -30,7 +30,7 @@ getExperimentsData = function(tag, numRuns) {
 
   data.info = do.call("rbind", aux)
   temp = cbind(results, data.info)
-  temp$perMajClass = temp$MajorityClassSize / temp$NumberOfInstances
+  temp$perMajClass = temp$majority.class.size / temp$number.of.instances
   temp$flow.name = sub("\\(.*", "", temp$flow.name)
   
   return(temp)
